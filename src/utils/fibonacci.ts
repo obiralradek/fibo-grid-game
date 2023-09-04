@@ -7,6 +7,10 @@ export function isFibonacciSequence(arr: TileValue[]): boolean {
   let firstDirection = true;
   let secondDirection = true;
 
+  for (let i = 0; i < n; i++) {
+    if (!isFibonacci(arr[i])) return false;
+  }
+
   for (let i = 2; i < n; i++) {
     if (arr[i - 1]! + arr[i - 2]! !== arr[i]) {
       firstDirection = false;
@@ -79,4 +83,14 @@ export function filterOutFiboSequences(board: Board): {
     }
   }
   return { filteredBoard: newBoardRows, changes: changesArray };
+}
+
+function isPerfectSquare(x: number) {
+  let s = Math.floor(Math.sqrt(x));
+  return s * s == x;
+}
+
+function isFibonacci(n: number | undefined) {
+  if (n === undefined) return false;
+  return isPerfectSquare(5 * n * n + 4) || isPerfectSquare(5 * n * n - 4);
 }
