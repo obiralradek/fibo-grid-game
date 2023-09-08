@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Example
+
+You can find the deployed application [here](https://obiralradek.github.io/fibo-grid-game/)
+
 ## About
 
 Simple assignment project, onClick increases values of all horizontal and vertical elements. Highlights changes.
